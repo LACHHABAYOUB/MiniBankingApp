@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon_io/-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <script src="js/js.js"></script>
+    <title>MiniBankingApp</title>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-inverse" style="background-color: #343a40!important;">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">CS472:::MiniBankingApp</a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                    <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+
+    <form>
+        <div class="container">
+            <h3>Bank Account Form</h3>
+            <p>
+            <div class="form-group">
+                <label for="exampleInputEmail1">Account Number</label>
+                <input type="text" class="form-control" id="AccountNum" pattern="^01-([0-9]{3}-)[0-9]{4}$"
+                    placeholder="01-XXX-XXXX" required />
+            </div>
+
+            <div class="form-group">
+                <label for="exampleInputEmail1">Customer Name</label>
+                <input type="text" class="form-control" id="CusName" placeholder="e.g John B.smith" required />
+            </div>
+
+            <div class="form-group">
+                <label for="exampleInputEmail1">Type of Account</label>
+                <select class="form-control" id="Supplier" required>
+                    <option></option>
+                    <option>Savings</option>
+                    <option>Checking</option>
+                    <option>loan</option>
+                </select>
+            </div>
+
+
+            <br>
+            <button type="submit" class="btn btn-primary btn-lg" style="background-color:#007bff !important;" id="btnCreate" value="Submit">Create New Account</button>
+            <br> <br>
+
+            <div>
+
+                <ul class="list-group" id="menu">
+                    <li class="list-group-item active" style="background-color:#007bff !important;" >List of Customers Account</li>
+                </ul>
+            </div>
+
+
+        </div>
+    </form>
+
+
+
+</body>
+
+</html>
